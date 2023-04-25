@@ -1,0 +1,121 @@
+// function squareArray(numbers) {
+//   return numbers.map((num) => num ** 2);
+// }
+// const numbers = [1, 2, 3, 4, 5];
+// const squaredNumbers = squareArray(numbers);
+// console.log(squaredNumbers); //
+
+// function capitalizeNames(objects) {
+//     return objects.map((obj) => obj.name.toUpperCase());
+//   }
+//   const objects = [
+//     { name: 'john' },
+//     { name: 'jane' },
+//     { name: 'bob' },
+//   ];
+//   const capitalizedNames = capitalizeNames(objects);
+//   console.log(capitalizedNames);
+
+// let array = ["hi", "velan", "roja", "hello", "velan", "roja", "kawin"];
+// let obj = [];
+// array.map((e) => {
+//   //   console.log(e);
+//   if (e in obj) {
+//     return (obj[e] += 1);
+//   } else {
+//     return (obj[e] = 1);
+//   }
+// });
+// console.log(obj);
+
+// const objects = [
+//     { name: 'john' },
+//     { name: 'jane' },
+//     { name: 'bob' },
+// ];
+// a=objects.map((obj) => obj.name.toUpperCase());
+// console.log(a);
+
+// let ar = "singaravelan";
+// val = ar.split("");
+
+// let obj = {};
+// val.map((e) => {
+//   if (e in obj) {
+//     return (obj[e] += 1);
+//   } else {
+//     return (obj[e] = 1);
+//   }
+// });
+// console.log(obj);
+
+// let a = [
+//   { id: "1", name: "velan", age: "25", category: "ape" },
+//   { id: "2", name: "vijay", age: "26", category: "ape" },
+//   { id: "3", name: "uma", age: "28", category: "alien" },
+// ];
+// let obj = {};
+// a.map((e) => {
+//   if (!(e.category in obj)) {
+//     obj[e.category] = [];
+//   }
+//   obj[e.category].push(e);
+// });
+// console.log(obj);
+
+// const ar = ["velan", "sooria", "roshan", "velan"];
+// function removeDuplicates(ar) {
+//   let b = [];
+//   ar.map((e) => (!b.includes(e) ? b.push(e) : ""));
+//   return b;
+// }
+// console.log(removeDuplicates(ar));
+
+// names = [
+//   { names: "roshin", age: 21 },
+//   { names: "gokul", age: 22 },
+//   { names: "selva", age: 21 },
+//   { names: "jagan", age: 22 },
+//   { names: "singaram", age: 22 },
+//   { names: "vishnu", age: 24 },
+// ];
+// obj = {};
+// names.map((e) => {
+//   if (!(e.age in obj)) {
+//     obj[e.age] = [];
+//   }
+//   obj[e.age].push(e);
+// });
+// console.log(obj);
+
+// strings = ["roshin", "selva"];
+
+// obj = {};
+
+// strings.map((e) => {
+//   stringAsChar = e.split("");
+
+//   charAsSort = stringAsChar.sort();
+
+//   alphabaticString = charAsSort.join("");
+//   obj[alphabaticString] = e;
+// });
+
+// console.log(obj);
+
+names = [
+  { names: "roshin", age: 21, year: new Date("2020-04-01") },
+  { names: "gokul", age: 22, year: new Date("2020-05-04") },
+  { names: "selva", age: 21, year: new Date("2021-06-14") },
+  { names: "jagan", age: 22, year: new Date("2022-09-23") },
+  { names: "singaram", age: 22, year: new Date("2021-10-24") },
+  { names: "vishnu", age: 24, year: new Date("2020-12-26") },
+];
+obj = {};
+names.map((e) => {
+  if (!(e.year.getFullYear() in obj)) {
+    obj[e.year.getFullYear()] = [];
+  }
+  obj[e.year.getFullYear()].push(e);
+});
+console.log(obj);
